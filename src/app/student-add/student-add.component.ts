@@ -14,14 +14,15 @@ export class StudentAddComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
-
-    this.http.get('http://192.168.1.77/student/', this.student).subscribe(res => {
-          let id = (res => 
-          this.router.navigate(['/student-edit', id]);
+}
+saveStudent(){
+    this.http.post('http://192.168.1.77/student/', this.student).subscribe(res => {
+          let id = res['id'];
+          this.router.navigate(['/student-add', id]);
         }, (err) => {
           console.log(err);
         }
       );
   }
 }
-}
+

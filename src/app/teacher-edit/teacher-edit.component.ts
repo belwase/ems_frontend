@@ -8,7 +8,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./teacher-edit.component.css']
 })
 export class TeacherEditComponent implements OnInit {
- teacher = {};
+
+ teacher = {user:{}};
+
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
   
   ngOnInit() {
@@ -22,6 +24,7 @@ export class TeacherEditComponent implements OnInit {
 
 }
 updateTeacher() {
+  var student = this.teacher;
   	console.log('updating..', this.teacher)
     this.http.put('http://192.168.1.77/teacher/'+this.teacher.id+'/', this.teacher)
       .subscribe(res => {

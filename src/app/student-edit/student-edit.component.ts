@@ -10,7 +10,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class StudentEditComponent implements OnInit {
 
-	student : any;
+	student : {user:{}};
+
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -23,6 +24,7 @@ export class StudentEditComponent implements OnInit {
   }
 
 updateStudent() {
+  var student = this.student;
   	console.log('updating..', this.student)
     this.http.put('http://192.168.1.77/student/'+this.student.id+'/', this.student)
       .subscribe(res => {

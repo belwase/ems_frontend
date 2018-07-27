@@ -10,8 +10,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ParentEditComponent implements OnInit {
 
-  parent: any;
-  constructor(private http: HttpClient, private router: Router, private route: Router, private route: ActivatedRoute) { }
+  parent = {user:{}};
+  
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
   	 this.getParent(this.route.snapshot.params['id']);

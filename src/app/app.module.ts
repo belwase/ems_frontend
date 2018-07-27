@@ -20,6 +20,23 @@ import { ParentEditComponent } from './parent-edit/parent-edit.component';
 import { TeacherEditComponent } from './teacher-edit/teacher-edit.component';
 import { TeacherAddComponent } from './teacher-add/teacher-add.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { MassAddComponent } from './mass-add/mass-add.component';
+import { SingleAddComponent } from './single-add/single-add.component';
+import { AccountantAddComponent } from './accountant-add/accountant-add.component';
+import { AccountantEditComponent } from './accountant-edit/accountant-edit.component';
+import { AccountantListComponent } from './accountant-list/accountant-list.component';
+import { PaymentAddComponent } from './payment-add/payment-add.component';
+import { PaymentEditComponent } from './payment-edit/payment-edit.component';
+import { PaymentListComponent } from './payment-list/payment-list.component';
+import { ClassAddComponent } from './class-add/class-add.component';
+import { ClassEditComponent } from './class-edit/class-edit.component';
+import { ClassListComponent } from './class-list/class-list.component';
+import { AttendanceAddComponent } from './attendance-add/attendance-add.component';
+import { AttendanceEditComponent } from './attendance-edit/attendance-edit.component';
+import { AttendanceListComponent } from './attendance-list/attendance-list.component';
+import { GradeAddComponent } from './grade-add/grade-add.component';
+import { GradeEditComponent } from './grade-edit/grade-edit.component';
+import { GradeListComponent } from './grade-list/grade-list.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +55,23 @@ import { TeacherListComponent } from './teacher-list/teacher-list.component';
     TeacherEditComponent,
     TeacherAddComponent,
      TeacherListComponent,
+     MassAddComponent,
+     SingleAddComponent,
+     AccountantAddComponent,
+     AccountantEditComponent,
+     AccountantListComponent,
+     PaymentAddComponent,
+     PaymentEditComponent,
+     PaymentListComponent,
+     ClassAddComponent,
+     ClassEditComponent,
+     ClassListComponent,
+     AttendanceAddComponent,
+     AttendanceEditComponent,
+     AttendanceListComponent,
+     GradeAddComponent,
+     GradeEditComponent,
+     GradeListComponent,
 
   
 

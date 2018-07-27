@@ -10,12 +10,15 @@ import { HttpClient } from '@angular/common/http';
 export class TeacherAddComponent implements OnInit {
 
   teacher ={user:{}};
+
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
-  
-    this.http.get('http://192.168.1.77/teacher/', this.teacher).subscribe(res => {
-          let id =res['id'];
+  }
+
+  saveTeacher() { 
+    this.http.post('http://192.168.1.77/teacher/', this.teacher).subscribe(res => {
+          let id = res['id'];
           this.router.navigate(['/teacher-add', id]);
         }, (err) => {
           console.log(err);
