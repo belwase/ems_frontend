@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,16 +7,16 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./parent-list.component.css']
 })
 export class ParentListComponent implements OnInit {
+    parents:any;
 
-  parents: any;
-  constructor(private http: HttpClient) { }
+  constructor(private http:HttpClient) { }
 
-ngOnInit() {
-  this.http.get('http://192.168.1.77/parents/').subscribe(data => {
-  		console.log('data :: ')
-  		console.log(data)
-	    this.parents = data;
-     });
+  ngOnInit() {
+
+    this.http.get('http://192.168.1.77/parent/').subscribe(data=>{
+    this.parents=data;
+  });
+
   }
 
 }

@@ -37,7 +37,6 @@ import { AttendanceListComponent } from './attendance-list/attendance-list.compo
 import { GradeAddComponent } from './grade-add/grade-add.component';
 import { GradeEditComponent } from './grade-edit/grade-edit.component';
 import { GradeListComponent } from './grade-list/grade-list.component';
-import { ClassRoutinComponent } from './class-routin/class-routin.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +72,7 @@ import { ClassRoutinComponent } from './class-routin/class-routin.component';
      GradeAddComponent,
      GradeEditComponent,
      GradeListComponent,
-     ClassRoutinComponent,
+     
 
   
 

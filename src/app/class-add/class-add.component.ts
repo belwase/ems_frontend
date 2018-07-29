@@ -8,20 +8,19 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./class-add.component.css']
 })
 export class ClassAddComponent implements OnInit {
-	_class = {user:{}} ;
-
+  class={user:{}};
   constructor(private http: HttpClient, private router: Router) { }
-
   ngOnInit() {
-  	}
-saveClass(){
-    this.http.post('http://192.168.1.77/class/', this._class).subscribe(res => {
-          let id = res['id'];
+  }
+   saveClass() {
+    this.http.post('http://192.168.1.77/class/', this.class)
+      .subscribe(res => {
+            let id=res['id'];
           this.router.navigate(['/class-add', id]);
         }, (err) => {
-          console.log(err);
+          console.log();
         }
-      );
-  }
+        );
+   }
 
 }

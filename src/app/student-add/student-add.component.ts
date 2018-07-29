@@ -8,21 +8,19 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./student-add.component.css']
 })
 export class StudentAddComponent implements OnInit {
-
-  student = {user:{}} ;
-
+  student ={user:{}};
   constructor(private http: HttpClient, private router: Router) { }
-
   ngOnInit() {
-}
-saveStudent(){
-    this.http.post('http://192.168.1.77/student/', this.student).subscribe(res => {
-          let id = res['id'];
+  }
+   saveStudent() {
+    this.http.post('http://192.168.1.77/student/', this.student)
+      .subscribe(res => {
+            let id=res['id'];
           this.router.navigate(['/student-add', id]);
         }, (err) => {
           console.log(err);
         }
-      );
-  }
-}
+        );
+   }
 
+}

@@ -1,66 +1,87 @@
+<div class="container">
+  <h1>Add Accountant</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveAccountant()" #accountantForm="ngForm">
+        <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2"> Name</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="accountant.user.full_name" name="text"  placeholder="Enter  Name" required>
+                       </div>
+                  </div>
+             </div>
+        </div>
+    
+        <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Address</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="accountant.user.addresss" name="address" placeholder="Enter Permanent Address"required/>
+                       </div>
+                  </div>
+             </div>
+           </div>
 
-  <div class="container-fluid">
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>
-                                <b>Add Accountant</b>
-                            </h2>
-                        </div>
-                         </div> 
-          <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Name.</label>
-                </div>
+            <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Phone</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="number" class="form-control" [(ngModel)]="accountant.user.phoneno" name="text"  placeholder="" required>
+                       </div>
+                  </div>
+             </div>
+        </div>
 
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                <select class="form-control">
+       <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Email Address</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="accountant.user.email" name="text"  placeholder="Enter a valid email address" required>
+                       </div>
+                  </div>
+             </div>
+        </div>
+        <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Gender</label>
+             </div>
+           </div>
+         <div class="col-md-6">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <select ng-model= "accountant.user.gender">
+                          <option >Male</option>
+                         <option>Female</option>
+                         </select>
+                       </div>
+                  </div>
+             </div>
+        </div>
 
-                                    <option>--Select--</option>
-                                    <option>--</option>
-                                    <option>--</option>
-                                    <option>--</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>    
-          </div> 
-          <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Email</label>
-                </div>
-
-                <div class=" col-md-10">
-                    
-                                <div class="form-group">
-                                <div class="form-line">
-                                 <input type="text" class="form-control" placeholder="Enter Email Address"/>
-                                   
-                        </div>
-                    </div>    
-          </div>   
-                   <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Password</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    
-                                <div class="form-group">
-                                <div class="form-line">
-                                 <input type="password" class="form-control" placeholder="Enter Passwo"/>
-                                   
-                        </div>
-                    </div>    
-         
-         
-          <button class="btn btn-block btn-lg bg-pink waves-effect" type="Submit">Submit</button>
-      </div>
-  </div>
-</div>
-
+          <div class="input-group">
+            <button type="Submit" class="btn btn-success" [disabled]="!accountantForm.form.valid">Save</button>
+          </div>
+        </form>
+      

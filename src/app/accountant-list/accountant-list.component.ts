@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AccountantListComponent implements OnInit {
 
-  accountants: any;
+accountants: any;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {

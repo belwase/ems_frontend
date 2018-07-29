@@ -15,7 +15,7 @@ export class PaymentAddComponent implements OnInit {
   ngOnInit() {
   	}
 savePayment(){
-    this.http.post('http://192.168.1.77/payment/', this.payment).subscribe(res => {
+    this.http.post('http://192.168.1.87/payment/', this.payment).subscribe(res => {
           let id = res['id'];
           this.router.navigate(['/payment-add', id]);
         }, (err) => {

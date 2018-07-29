@@ -1,184 +1,58 @@
 
-  <div class="container-fluid">
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>
-                                <b>Payment</b>
-                            </h2>
-                        </div>
-                        <div class="body">
-                         
-                            <h2 class="card-inside-title">Add New Payment</h2>
-                          </div>
-                         <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Name</label>
-                </div>
-
-                <div class=" col-md-10">
-                    
-                                <div class="form-group">
-                                <div class="form-line">
-                                 <input type="text" class="form-control" placeholder="Full"/>
-                                   
-                        </div>
-                    </div>    
-          </div>  
-
-          <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Address</label>
-                </div>
-
-                <div class=" col-md-10">
-                    
-                                <div class="form-group">
-                                <div class="form-line">
-                                 <input type="text" class="form-control" placeholder="Enter Home Address"/>
-                                   
-                        </div>
-                    </div>    
-          </div>   
-                   <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">DOB</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    
-                                <div class="form-group">
-                                <div class="form-line">
-                                 <input type="text" class="form-control" placeholder="Enter Date Of Birth"/>
-                                   
-                        </div>
-                    </div>    
-          </div> 
-          <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Gender</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                <select class="form-control">
-
-                                    <option>--Select--</option>
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
+  <div class="container">
+  <h1>Add New Payment</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="savePayment()" #paymentForm="ngForm">
+        <div class="input-group">
+             <div class="col-sm-3">
+               <div class="form-group">
+                   <label for="email_address_2">Student Id</label>
+                 </div>
+               </div>
+            <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                          <select class="form-control" [(ngModel)]="payment.user.studentid" name="payment" autofocus>
+                                    <option>Sonika</option>
+                                    <option>Suraj</option>
+                                    <option>Sita</option>
                                 </select>
-                            </div>
-                        </div>
-                    </div>    
-          </div>   
-           <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Father's Name</label>
-                </div>
+                       </div>
+                  </div>
+             </div>
+        </div>
 
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                
-                                 <input type="text" class="form-control" placeholder="Enter Father's Name"/>
-                                   
-                        </div>
-                    </div>    
-          </div>     
-           <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Mother's Name</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                
-                                 <input type="text" class="form-control" placeholder="Enter Father's Name"/>
-                                   
-                        </div>
-                    </div>    
-          </div>     
-        <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Class</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                <select class="form-control">
-
-                                    <option>--Select--</option>
-                                    <option>--</option>
-                                    <option>--</option>
-                                    <option>--</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>    
-          </div>  
-           <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Section</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                <select class="form-control">
-
-                                    <option>--Select Section--</option>
-                                    <option>--</option>
-                                    <option>--</option>
-                                    <option>--</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>    
-          </div>    
-                  <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Phone</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                
-                                 <input type="password" class="form-control" placeholder="Enter Contact Number"/>
-                                   
-                        </div>
-                    </div>    
-          </div>   
-          <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Email</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                
-                                 <input type="number" class="form-control" placeholder="Enter Email Address"/>
-                                   
-                        </div>
-                    </div>    
-          </div>   
-         
-         
-          <button class="btn btn-block btn-lg bg-pink waves-effect" type="Submit">Add Payment</button>
-      </div>
-  </div>
-</div>
-
+        <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Payment Amount</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="number" class="form-control" [(ngModel)]="payment.user.payment_amount" name="text"  placeholder="" required>
+                       </div>
+                  </div>
+             </div>
+        </div>
+        <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Description</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="payment.user.description" name="text"  placeholder="description" required/>
+                       </div>
+                  </div>
+             </div>
+        </div>
+    
+          <div class="input-group">
+            <button type="Submit" class="btn btn-success" [disabled]="!paymentForm.form.valid">POST</button>
+          </div>
+      

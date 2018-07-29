@@ -8,24 +8,24 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./teacher-edit.component.css']
 })
 export class TeacherEditComponent implements OnInit {
-
- teacher = {user:{}};
-
-  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
+   teacher={};
   
+  constructor(private http:HttpClient, private router: Router) { }
+
   ngOnInit() {
-  	this.getTeacher(this.route.snapshot.params['id']);
+    this.getTeacher(this.route.snapshot.params['id']);
   }
-  
-   getTeacher(id) {
+
+getTeacher(id) {
     this.http.get('http://192.168.1.77/teacher/'+id).subscribe(data => {
       this.teacher = data;
-       });
+      //console.log(this.student);
+    });
+  }
 
-}
-updateTeacher() {
-  var student = this.teacher;
-  	console.log('updating..', this.teacher)
+  
+ updateStudent() {
+    console.log('updating..', this.teacher)
     this.http.put('http://192.168.1.77/teacher/'+this.teacher.id+'/', this.teacher)
       .subscribe(res => {
           alert('updated')
@@ -36,3 +36,6 @@ updateTeacher() {
   }
 
 }
+
+
+

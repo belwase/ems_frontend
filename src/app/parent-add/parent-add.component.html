@@ -1,110 +1,89 @@
+<div class="container">
+  <h1>Add New Parent</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveParent()" #parentForm="ngForm">
+        <div class="input-group">
+             <div class="col-sm-3">
+               <div class="form-group">
+                   <label for="email_address_2">Full Name</label>
+                 </div>
+               </div>
+              <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="parent.user.full_name" name="text"  placeholder="Enter Parent Name" required>
+                       </div>
+                  </div>
+             </div>
+        </div>
+      
+        <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Address</label>
+             </div>
+           </div>
+          <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="parent.user.address" name="address" placeholder="Enter Permanent"required>
+                       </div>
+                  </div>
+             </div>
+        </div>
 
-  <div class="container-fluid">
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>
-                                <b>Parents</b>
-                            </h2>
-                        </div>
-                        <div class="body">
-                         
-                            <h2 class="card-inside-title">Add Parent</h2>
-                          </div>
-                         <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Name</label>
-                </div>
+     <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Contact Number</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="parent.user.phoneno" name="password" placeholder="Enter  Contact Number"required>
+                       </div>
+                  </div>
+             </div>
+        </div>
 
-                <div class=" col-md-10">
-                    
-                                <div class="form-group">
-                                <div class="form-line">
-                                 <input type="text" class="form-control" placholder="Enter Parents Name
-                                 "/>
-                                   
-                        </div>
-                    </div>    
-          </div>   
-                   <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Email</label>
-                </div>
+           <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Email Address</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="parent.user.email_address" name="password" placeholder="Email address"required>
+                       </div>
+                  </div>
+             </div>
+        </div>
+    
+        <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Gender</label>
+             </div>
+           </div>
+         <div class="col-md-6">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <select>
+                          <option>Male</option>
+                         <option>Female</option>
+                         <option>Others</option>
+                         </select>
+                       </div>
+                  </div>
+             </div>
+        </div>
 
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    
-                                <div class="form-group">
-                                <div class="form-line">
-                                 <input type="text" class="form-control" placholder="Email Address"/>
-                                   
-                        </div>
-                    </div>    
-          </div>   
-       
-                  <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Password</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                
-                                 <input type="password" class="form-control" placholder="Enter Password"/>
-                                   
-                        </div>
-                    </div>    
-          </div>   
-          <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Phone</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                
-                                 <input type="number" class="form-control" placholder="Enter Number"/>
-                                   
-                        </div>
-                    </div>    
-          </div>   
-          <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Address</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                
-                                 <input type="text" class="form-control" placholder="Enter Address"/>
-                                   
-                        </div>
-                    </div>    
-          </div>   
-          <div class="body">
-                 <div class="row clearfix">
-                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="Title">Profession</label>
-                </div>
-
-                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                    <div class="form-group">
-                                <div class="form-line">
-                                
-                                 <input type="text" class="form-control" placholder="Enter Job"/>
-                                   
-                        </div>
-                    </div>    
-          </div>   
-          <button class="btn btn-block btn-lg bg-pink waves-effect" type="Submit">Add Parent</button>
-      </div>
-  </div>
-</div>
+        
+          <div class="input-group">
+            <button type="Submit" class="btn btn-success" [disabled]="!parentForm.form.valid">Add Parent</button>
+          </div>
+      

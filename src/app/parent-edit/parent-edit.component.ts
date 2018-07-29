@@ -2,31 +2,32 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
-
 @Component({
   selector: 'app-parent-edit',
   templateUrl: './parent-edit.component.html',
   styleUrls: ['./parent-edit.component.css']
 })
 export class ParentEditComponent implements OnInit {
-
-  parent = {user:{}};
+   parents={user:{}};
   
-  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
+  constructor(private http:HttpClient, private router: Router) { }
 
   ngOnInit() {
-  	 this.getParent(this.route.snapshot.params['id']);
-  	}
-  	 getParent(id) {
-    this.http.get('http://192.168.1.77/parents/'+id).subscribe(data => {
-      this.parent = data;
-     });
+    this.getParents(this.route.snapshot.params['id']);
   }
 
-updateParent() {
-    var parent = this.parent;
-  	console.log('updating..', this.parent)
-    this.http.put('http://192.168.1.77/parents/'+this.parent.id+'/', this.parent)
+getParents(id) {
+    this.http.get('http://192.168.1.77/parents/'+id).subscribe(data => {
+      this.parents = data;
+      //console.log(this.student);
+    });
+  }
+
+  
+ updateParent() {
+  var parents=this.parents;
+    console.log('updating..', parents)
+    this.http.put('http://192.168.1.77/parents/'+this.parents.id+'/', this.parents)
       .subscribe(res => {
           alert('updated')
         }, (err) => {
@@ -34,4 +35,5 @@ updateParent() {
         }
       );
   }
+
 }

@@ -8,21 +8,19 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./accountant-add.component.css']
 })
 export class AccountantAddComponent implements OnInit {
-
-  accountant = {user:{}} ;
-
+  accountant ={user:{}};
   constructor(private http: HttpClient, private router: Router) { }
-
   ngOnInit() {
-}
-saveAccountant(){
-    this.http.post('http://192.168.1.77/accountant/', this.accountant).subscribe(res => {
-          let id = res['id'];
+  }
+   saveAccountant() {
+    this.http.post('http://192.168.1.77/accountant/', this.accountant)
+      .subscribe(res => {
+            let id=res['id'];
           this.router.navigate(['/accountant-add', id]);
         }, (err) => {
-          console.log(err);
+          console.log();
         }
-      );
-  }
-}
+        );
+   }
 
+}

@@ -122,7 +122,6 @@ const routes: Routes = [
 	    path: "class/edit/:id",
 	    component: ClassEditComponent
 	  },
-
 	  {
 	    path: "attendance/add",
 	    component: AttendanceAddComponent
