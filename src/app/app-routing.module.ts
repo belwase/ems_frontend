@@ -24,12 +24,16 @@ import { PaymentEditComponent } from './payment-edit/payment-edit.component';
 import { ClassAddComponent } from './class-add/class-add.component';
 import { ClassListComponent } from './class-list/class-list.component';
 import { ClassEditComponent } from './class-edit/class-edit.component';
+import { ClassRoutinComponent } from './class-routin/class-routin.component';
 import { AttendanceAddComponent } from './attendance-add/attendance-add.component';
 import { AttendanceEditComponent } from './attendance-edit/attendance-edit.component';
 import { AttendanceListComponent } from './attendance-list/attendance-list.component';
 import { GradeAddComponent } from './grade-add/grade-add.component';
 import { GradeEditComponent } from './grade-edit/grade-edit.component';
 import { GradeListComponent } from './grade-list/grade-list.component';
+import { SubjectAddComponent } from './subject-add/subject-add.component';
+import { SubjectEditComponent } from './subject-edit/subject-edit.component';
+import { SubjectListComponent } from './subject-list/subject-list.component';
 
 
 
@@ -123,6 +127,11 @@ const routes: Routes = [
 	    component: ClassEditComponent
 	  },
 
+{
+	    path: "class/routin",
+	    component: ClassRoutinComponent
+	  },
+
 	  {
 	    path: "attendance/add",
 	    component: AttendanceAddComponent
@@ -148,7 +157,19 @@ const routes: Routes = [
 	    path: "grade/edit/:id",
 	    component: GradeEditComponent
 	  },
-
+     {
+	    path: "subject/add",
+	    component: SubjectAddComponent
+	  },
+	  {
+	    path: "subject/list",
+	    component: SubjectListComponent
+	  },
+	  {
+	    path: "subject/edit/:id",
+	    component: SubjectEditComponent
+	  },
+	  
 	];
 
 @NgModule({

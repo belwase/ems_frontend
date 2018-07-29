@@ -38,6 +38,10 @@ import { GradeAddComponent } from './grade-add/grade-add.component';
 import { GradeEditComponent } from './grade-edit/grade-edit.component';
 import { GradeListComponent } from './grade-list/grade-list.component';
 import { ClassRoutinComponent } from './class-routin/class-routin.component';
+import { SubjectComponent } from './subject/subject.component';
+import { SubjectAddComponent } from './subject-add/subject-add.component';
+import { SubjectListComponent } from './subject-list/subject-list.component';
+import { SubjectEditComponent } from './subject-edit/subject-edit.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +78,10 @@ import { ClassRoutinComponent } from './class-routin/class-routin.component';
      GradeEditComponent,
      GradeListComponent,
      ClassRoutinComponent,
+     SubjectComponent,
+     SubjectAddComponent,
+     SubjectListComponent,
+     SubjectEditComponent,
 
   
 
