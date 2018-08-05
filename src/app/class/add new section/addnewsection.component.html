@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Add New Section</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveSection()" #sectionForm="ngForm">
+        <div class="input-group">
+             <div class="col-sm-4">
+               <div class="form-group">
+                   <label for="email_address_2">Section Name</label>
+                 </div>
+               </div>
+              <div class="col-md-8">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="section.section_name" name="text" required>
+                       </div>
+                  </div>
+             </div>
+        </div>
+        <div class="input-group">
+           <div class="col-sm-4">
+             <div class="form-group">
+               <label for="email_address_2">Section Description</label>
+             </div>
+           </div>
+         <div class="col-md-8">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="section.section_description" name="text"  required>
+                       </div>
+                  </div>
+             </div>
+        </div>
+         <div class="col-md-9">
+       
+          <div class="input-group">
+           <button type="Submit" class="btn btn-success" [disabled]="!sectionForm.form.valid">Add Section</button>
+          </div>
+      
+

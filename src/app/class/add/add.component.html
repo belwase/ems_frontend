@@ -1,0 +1,62 @@
+   <div class="col-md-6">
+      <div class="header">
+        <h1>
+          <b> Manage Class</b>
+        </h1>
+      </div>
+       <div class="container">
+        <h2>Add Class</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="saveClass()" #classForm="ngForm">
+        <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2"> Name</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="class.name" name="text"  placeholder="Enter  Name" required>
+                       </div>
+                  </div>
+             </div>
+        </div>
+    
+        <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Max Capacity</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="class.max_capacity" name="max_capacity"required/>
+                       </div>
+                  </div>
+             </div>
+           </div>
+
+            <div class="input-group">
+           <div class="col-sm-3">
+             <div class="form-group">
+               <label for="email_address_2">Description</label>
+             </div>
+           </div>
+         <div class="col-md-9">
+                  <div class="form-group">
+                     <div class="form-line">
+                         <input type="text" class="form-control" [(ngModel)]="class.description" name="text"  placeholder="" required>
+                       </div>
+                  </div>
+             </div>
+        </div>
+
+          <div class="input-group">
+            <button type="Submit" class="btn btn-success" [disabled]="!classForm.form.valid">Add Class</button>
+          </div>
+        </form>
+      
+
