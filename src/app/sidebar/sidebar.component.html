@@ -1,5 +1,5 @@
 <!-- #Top Bar -->
-  
+    <section>
         <!-- Left Sidebar -->
         <aside id="leftsidebar" class="sidebar">
             <!-- User Info -->
@@ -27,7 +27,7 @@
             <!-- #User Info -->
             <!-- Menu -->
             <div class="menu">
-                <ul class="list" style="height: 900px;">
+                <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
                     <li class="active">
                         <a routerLink="/">
@@ -35,198 +35,76 @@
                             <span>Home</span>
                         </a>
                     </li>
-
                     <li>
-                        <a routerLink="/student/add" class="menu-toggle">
-                            <i class="material-icons">person_pin</i>
-                            <span>Student</span>
-                        </a>
-                         <ul class="ml-menu">
-                             <li>
-                                <a routerLink="/student/add">
-                                    <span>Add</span>
-                                </a> 
-                            </li>
-                             <li>
-                                <a routerLink="/student/list">
-                                    <span>List</span>
-                                </a> 
-                            </li>
-                           
-                            
-                        </ul>
-                    </li>
-
-                    <li>
-                       <a routerLink="/teacher/add" class="menu-toggle">
-                            <i class="material-icons">person_pin</i>
-                            <span>Teacher</span>
-                        </a>
-                       <ul class="ml-menu">
-                         <li>
-                                <a routerLink="/teacher/add">
-                                    <span>Add</span>
-                                </a> 
-                            </li>
-                             <li>
-                                <a routerLink="/teacher/list">
-                                    <span>List</span>
-                                </a> 
-                            </li>
-                        </ul>
-                            </li>
-
-
-                        <li>
-                        <a routerLink="/parent/add" class="menu-toggle">
-                            <i class="material-icons">person_pin</i>
-                            <span>Parent</span>
-                        </a>
-                         <ul class="ml-menu">
-                             <li>
-                                <a routerLink="/parent/add">
-                                    <span>Add</span>
-                                </a> 
-                            </li>
-                             <li>
-                                <a routerLink="/parent/list">
-                                    <span>List</span>
-                                </a> 
-                            </li>                                                     
-                        </ul>
-                    </li>
-                    
-
-
-
-                        <li>
-                        <a routerLink="/subject/add" class="menu-toggle">
-                            <i class="material-icons">person_pin</i>
-                            <span>Subject</span>
-                        </a>
-                         <ul class="ml-menu">
-                             <li>
-                                <a routerLink="/subject/add">
-                                    <span>Add</span>
-                                </a> 
-                            </li>
-                             <li>
-                                <a routerLink="/subject/add/list">
-                                    <span>List</span>
-                                </a> 
-                            </li>                          
-                        </ul>
-                    </li>
-
-
-                        <li>
-                        <a routerLink="/accountant/add" class="menu-toggle">
-                            <i class="material-icons">person_pin</i>
-                            <span>Accountant</span>
-                        </a>
-                         <ul class="ml-menu">
-                             <li>
-                                <a routerLink="/accountant/add">
-                                    <span>Add</span>
-                                </a> 
-                            </li>
-                             <li>
-                                <a routerLink="/accountant/list">
-                                    <span>List</span>
-                                </a> 
-                            </li>                          
-                        </ul>
-                    </li>
-
-                      <li>
-                       <a routerLink="/class/add" class="menu-toggle">
-                            <i class="material-icons">person_pin</i>
-                            <span>Class</span>
-                        </a>
-                       <ul class="ml-menu">
-                         <li>
-                                <a routerLink="/class/add">
-                                    <span>Add</span>
-                                </a> 
-                            </li>
-                             <li>
-                                <a routerLink="/class/list">
-                                    <span>List</span>
-                                </a> 
-                            </li>
-                            <li>
-                                <a routerLink="/class/routin">
-                                    <span>Routin</span>
-                                </a> 
-                            </li>
-                        </ul>
-                            </li>
-
-                              <li>
-                       <a routerLink="/attendance/add" class="menu-toggle">
+                        <a routerLink="/attendance/take-attendace" class="menu-toggle">
                             <i class="material-icons">person_pin</i>
                             <span>Attendance</span>
                         </a>
-                       <ul class="ml-menu">
-                         <li>
-                                <a routerLink="/attendance/add">
-                                    <span>Add</span>
+                         <ul class="ml-menu">
+    
+                            <li>
+                                <a routerLink="/attendance/take-attendance">
+                                    <span>Take Attendance</span>
                                 </a> 
-                            </li>
-                             <li>
-                                <a routerLink="/attendance/list">
-                                    <span>List</span>
-                                </a> 
-                            </li>
+                            </li>    
+
+                                   
                         </ul>
-                            </li>
+                    </li>
 
-
-                              <li>
-                       <a routerLink="/grade/add" class="menu-toggle">
+                     <li>
+                        <a routerLink="/accounting" class="menu-toggle">
                             <i class="material-icons">person_pin</i>
-                            <span>Grade</span>
-                        </a>
-                       <ul class="ml-menu">
-                         <li>
-                                <a routerLink="/grade/add">
-                                    <span>Add</span>
-                                </a> 
-                            </li>
-                             <li>
-                                <a routerLink="/grade/list">
-                                    <span>List</span>
-                                </a> 
-                            </li>
-                        </ul>
-                            </li>
-
-
-                        <li>
-                        <a routerLink="/payment/add" class="menu-toggle">
-                            <i class="material-icons">person_pin</i>
-                            <span>Payment</span>
+                            <span>Accounting</span>
                         </a>
                          <ul class="ml-menu">
                              <li>
-                                <a routerLink="/payment/add">
-                                    <span>Add</span>
+                                <a routerLink="/accounting/payment">
+                                    <span>Payment</span>
                                 </a> 
                             </li>
-                             <li>
-                                <a routerLink="/payment/list">
-                                    <span>List</span>
+                            <li>
+                                <a routerLink="/accounting/expense">
+                                    <span>Expense</span>
                                 </a> 
                             </li>
                         </ul>
-                    </li>
-                    
+                    </li>    
 
-               
+                     <li>
+                        <a routerLink="/library" class="menu-toggle">
+                            <i class="material-icons">person_pin</i>
+                            <span>Library</span>
+                        </a>
+                         <ul class="ml-menu">
+                             <li>
+                                <a routerLink="/library/book-issue">
+                                    <span>Book Issue</span>
+                                </a> 
+                            </li>
+                             <li>
+                                <a routerLink="/library/book-dashboard">
+                                    <span>Dashboard</span>
+                                </a> 
+                            </li>
+                            
+                        </ul>
+
+                    </li>                    
+           
             <!-- #Menu -->
             <!-- Footer -->
-            
-            <!-- #Footer -->
-      
+            <div class="legal">
+                <div class="copyright">
+                    &copy; 2016 - 2017 <a href="javascript:void(0);">AdminBSB - Material Design</a>.
+                </div>
+                <div class="version">
+                    <b>Version: </b> 1.0.5
+                </div>
+            </div>
 
-      
+
+            <!-- #Footer -->
+       
+
+     

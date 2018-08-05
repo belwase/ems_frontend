@@ -1,0 +1,244 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bac",
+				"background-position\tproperty"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"background-c",
+				"background-color\tproperty"
+			],
+			[
+				"forn",
+				"form-line"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 255.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/sonika/Desktop/Edu-infosys/src/app/parent-add/parent-add.component.ts",
+		"/home/sonika/Desktop/Edu-infosys/src/app/app-routing.module.ts",
+		"/home/sonika/Desktop/Edu-infosys/src/app/app.module.ts",
+		"/home/sonika/Desktop/Edu-infosys/src/app/parent-list/parent-list.component.ts",
+		"/home/sonika/Desktop/Edu-infosys/src/app/parent-add/parent-add.component.html",
+		"/home/sonika/Desktop/Edu-infosys/src/app/sidebar/sidebar.component.html",
+		"/home/sonika/Desktop/Edu-infosys/src/app/parent-list/parent-list.component.html",
+		"/home/sonika/Desktop/Edu-infosys/src/app/topbar/topbar.component.ts",
+		"/home/sonika/Desktop/edusys/add_parent.html",
+		"/home/sonika/Desktop/Edu-infosys/src/index.html",
+		"/home/sonika/Desktop/edusys/index.html",
+		"/home/sonika/Desktop/Edu-infosys/src/app/topbar/topbar.component.html",
+		"/home/sonika/Desktop/Edu-infosys/src/app/student-list/student-list.component.ts",
+		"/home/sonika/Desktop/edusys/page_add_gallery.html",
+		"/home/sonika/Desktop/edusys/add_grade.html",
+		"/home/sonika/Desktop/edusys/add_gallery.html",
+		"/home/sonika/Desktop/edusys/system_setting.html",
+		"/home/sonika/Desktop/edusys/up_academic_syllabus.html",
+		"/home/sonika/Desktop/edusys/admin_dashboard.html",
+		"/home/sonika/Desktop/edusys/add_event.html",
+		"/home/sonika/Desktop/edusys/sign-in.html",
+		"/home/sonika/Desktop/edusys/sign-up.html",
+		"/home/sonika/Desktop/edusys/css/stylepro.css",
+		"/home/sonika/Desktop/edusys/add_dormitory.html",
+		"/home/sonika/Desktop/edusys/add_bulkstd.html",
+		"/home/sonika/Desktop/edusys/setup_pay_info.html",
+		"/home/sonika/Desktop/edusys/manage_classlist.html",
+		"/home/sonika/Desktop/edusys/add_study_material.html",
+		"/home/sonika/Desktop/edusys/student_profile.html",
+		"/home/sonika/Desktop/edusys/add_class_routine.html",
+		"/home/sonika/Desktop/edusys/manage_teacher.html",
+		"/home/sonika/Desktop/edusys/send_marks_by_sms.html",
+		"/home/sonika/Desktop/edusys/add_book.html",
+		"/home/sonika/Desktop/edusys/Std_addmission_form.html",
+		"/home/sonika/Desktop/edusys/all_parents.html",
+		"/home/sonika/Desktop/edusys/student_reg.html",
+		"/home/sonika/Desktop/edusys/add_exam.html",
+		"/home/sonika/Desktop/edusys/transport_list.html",
+		"/home/sonika/Desktop/edusys/manage_attendance.html",
+		"/home/sonika/Desktop/edusys/create_single_invoice.html",
+		"/home/sonika/Desktop/edusys/attendance_report.html",
+		"/home/sonika/Desktop/edusys/create_mass_invoice.html",
+		"/home/sonika/Desktop/edusys/add_new_section.html",
+		"/home/sonika/Desktop/edusys/add_expenses.html",
+		"/home/sonika/Desktop/edusys/manage_grade.html",
+		"/home/sonika/Desktop/edusys/add_class.html",
+		"/home/sonika/Desktop/edusys/manage_exam_marks.html",
+		"/home/sonika/Desktop/edusys/add_accountant.html",
+		"/home/sonika/Desktop/edusys/teacher_reg.html",
+		"/home/sonika/Desktop/edusys/manage_payment.html",
+		"/home/sonika/Desktop/edusys/manage_marks.html",
+		"/home/sonika/Desktop/edusys/add_subject.html",
+		"/home/sonika/Desktop/edusys/student_payment.html",
+		"/home/sonika/Desktop/edusys/manage_class.html",
+		"/home/sonika/Desktop/edusys/manage_student.html",
+		"/home/sonika/Desktop/edusys/manage_subject.html",
+		"/home/sonika/Downloads/AdminBSBMaterialDesign-master/pages/forms/basic-form-elements.html",
+		"/home/sonika/Desktop/edusys/pages/forms/form-validation.html",
+		"/home/sonika/Desktop/edusys/pages/tables/jquery-datatable.html",
+		"/home/sonika/Downloads/AdminBSBMaterialDesign-master/pages/examples/sign-up.html",
+		"/home/sonika/Desktop/edusys/registra.html",
+		"/home/sonika/Desktop/edusys/registration_info.html",
+		"/home/sonika/Desktop/edusys/student_info.html",
+		"/home/sonika/Desktop/edusys/add_student.html"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "src.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 283.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
