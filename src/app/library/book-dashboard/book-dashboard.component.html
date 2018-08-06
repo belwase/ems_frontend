@@ -1,40 +1,204 @@
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+  <div class="input-group">
+    <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                           
-                            <ul class="header-dropdown m-r--5">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class="material-icons">more_vert</i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
-                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
-                                        <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <h2>
+                                <b>Library Management System</b>
+                            </h2>
+                        </div>              
+                          <br>
+                            <br>   
+                             <div class="body">                                    
+                  <div class="row clearfix">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-pink hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">book</i>
                         </div>
-                        <div class="body">
-                            <div class="icon-and-text-button-demo">
-                                <button type="button" class="btn btn-primary waves-effect">
-                                    <i class="material-icons">book</i>
-                                    <span>Books</span>
-                                </button>
-                                
-                               
-                                <button type="button" class="btn bg-red waves-effect">
-                                    <i class="material-icons">book</i>
-                                    <span>Issue Of Books</span>
-                                </button>
-                               
-                                <button type="button" class="btn bg-blue waves-effect">
-                                    <i class="material-icons">book</i>
-                                    <span>Search Book</span>
-                                </button>
-                               
-
-                            </div>
+                        <div class="content">
+                            <div class="text">Books</div>                   
                         </div>
                     </div>
                 </div>
+                </div>
+                  <div class="row clearfix">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-cyan hover-expand-effect">
+                      <div class="icon">
+                            <i class="material-icons">book</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">Issue Of Books</div>
+                            </div>                 
+                    </div>
+                </div>
+            </div>
+               
+                 <div class="row clearfix">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-light-green hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">book</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">Book Return</div>
+                            </div>
+                     </div>
+                    </div>
+                </div>
+             
+                  <div class="row clearfix">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-red hover-expand-effect">
+                      <div class="icon">
+                            <i class="material-icons">book</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">Student Details</div>
+
+                            <li>
+                                <a routerLink="/library/book-dashboard/book-issue">
+                                </a> 
+                            </li>
+                               <div class="row">
+          <div class="input-group">
+                <div class="container-fluid">
+                   <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                <b>Issue Of Books</b>
+                            </h2>
+                        </div>
+
+         <div class="input-group">
+                         <div class="col-sm-3">
+                            <div class="form-group">
+                                     <label for="name">Member's Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="name"   placeholder="Enter Member's Name" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+
+         <div class="input-group">
+                         <div class="col-sm-3">
+                            <div class="form-group">
+                                     <label for="member_id">Member's ID No.</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="member_id"   placeholder="Enter Number" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                          <div class="input-group">
+                         <div class="col-sm-3">
+                            <div class="form-group">
+                                     <label for="name">Name Of the Book</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="name"   placeholder="Enter Book Name" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                       
+                        <div class="input-group">
+                         <div class="col-sm-3">
+                            <div class="form-group">
+                                     <label for="name">Publisher's Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="name"   placeholder="Enter Publisher's Name" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                     <div class="input-group">
+                         <div class="col-sm-3">
+                            <div class="form-group">
+                                     <label for="book_sn">Book's Serial No.</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="book_sn"   placeholder="Enter Number" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>s
+
+        <div class="input-group">
+                         <div class="col-sm-3">
+                            <div class="form-group">
+                                     <label for="due_date">Issue Date</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="date" class="form-control" name="issue_date"   placeholder="Enter Issue Date" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="input-group">
+                         <div class="col-sm-3">
+                            <div class="form-group">
+                                     <label for="due_date">Due Date</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="date" class="form-control" name="due_date"   placeholder="Enter Due Date" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+        <div class="form-group">
+            <button class="btn btn-block btn-lg bg-pink waves-effect" type="Submit">Add Payment</button>
+        </div>
+   
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+                            </div>                 
+                    </div>
+                </div>
+            </div>
+          
+                    
+        
