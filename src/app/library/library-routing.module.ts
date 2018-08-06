@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   
   {
-    path: 'library/book-dashboaard/book-issue',
+    path: 'book-dashboard/book-issue',
     component: LibraryComponent,
     children: [
       { path: '', component: BookIssueComponent }
