@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { LibraryComponent } from './library.component';
 import { BookIssueComponent } from './book-dashboard/book-issue/book-issue.component';
 import { BookDashboardComponent } from './book-dashboard/book-dashboard.component';
-
+import { ManageStudentComponent } from './book-dashboard/manage-student/manage-student.component';
+import { ManageBookComponent } from './book-dashboard/manage-book/manage-book.component';
 const routes: Routes = [
    
   {
@@ -27,8 +28,24 @@ const routes: Routes = [
     children: [
       { path: '', component: BookDashboardComponent }
     ]
-  }
+  },
   
+     {
+    path: 'book-dashboard/manage-student',
+    component: LibraryComponent,
+    children: [
+      { path: '', component: ManageStudentComponent }
+    ]
+  },
+
+    {
+    path: 'book-dashboard/manage-book',
+    component: LibraryComponent,
+    children: [
+      { path: '', component: ManageBookComponent }
+    ]
+  }
+
 ];
 
 @NgModule({
