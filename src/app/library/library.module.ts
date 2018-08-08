@@ -7,6 +7,7 @@ import { BookIssueComponent } from './book-dashboard/book-issue/book-issue.compo
 import { BookDashboardComponent } from './book-dashboard/book-dashboard.component';
 import { ManageStudentComponent } from './book-dashboard/manage-student/manage-student.component';
 import { ManageBookComponent } from './book-dashboard/manage-book/manage-book.component';
+import { SearchComponent } from './book-dashboard/search/search.component';
 
 
 @NgModule({
@@ -15,6 +16,6 @@ import { ManageBookComponent } from './book-dashboard/manage-book/manage-book.co
     CommonModule,
     LibraryRoutingModule
   ],
-  declarations: [LibraryComponent, BookIssueComponent, BookDashboardComponent, ManageStudentComponent, ManageBookComponent]
+  declarations: [LibraryComponent, BookIssueComponent, BookDashboardComponent, ManageStudentComponent, ManageBookComponent, SearchComponent]
 })
 export class LibraryModule { }
