@@ -1,0 +1,210 @@
+ <div class="card">   
+  <div class="body">
+<div class="content-wrapper">
+    <div class="content">
+   <div class="page-header">
+          <form (ngSubmit)="saveManageMember()" #ManageMemberForm="ngForm">
+<ol class="breadcrumb breadcrumb-bg-blue">
+
+                                <li><a href="#"><i class="material-icons">home</i> Home</a></li>
+                               
+                                 <li><a href="#"><i class="material-icons">library_books</i>Library</a></li>
+                                <li class="active">Add Member</li>
+   
+                                <ul class="breadcrumb-elements">
+                                    
+          
+        </ul>
+         <a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a><a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a>
+
+            </ol> 
+           
+                
+                     
+
+      <div class="body">
+                      
+<button class="tablink" onclick="openPage('Add', this, 'blue')" type="button" data-color="blue" class="btn bg-blue waves-effect"><b>Add New Member</b></button>
+ 
+<button class="tablink" onclick="openPage('List', this, 'blue')" type="button" data-color="blue" class="btn bg-blue waves-effect"><b>Member Details</b></button> 
+</div>
+<div id="Add" class="tabcontent">
+      
+         <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                   
+                        <div class="header">
+                             <h2>
+                                <b><h2 style="color:Tomato;">Add New Member</h2></b>                                 
+                            </h2>
+                        </div>
+                        <div class="body">
+                      <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="member_id">Member ID</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="member_id"   placeholder="Enter member's ID" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+
+         <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="member_name">Member Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="member_name"   placeholder="Enter Member's Name" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                       
+                          <div class="input-group">
+                 <div class="col-sm-2">
+                    
+                    <label for="batch">Batch</label>
+                </div>
+
+                 <div class="col-md-9">
+                    <div class="form-group">
+                                <div class="form-line">
+                                <select class="form-control">
+
+                                    <option>--Select Batch--</option>
+                                    <option>--</option>
+                                    <option>--</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>    
+          </div>   
+                       
+                        <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="dept">Department</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="dept"   placeholder="Enter Department" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                     <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="phone">Contact No.</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="phone"   placeholder="Enter Phone Number" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+        <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="email"   placeholder="Enter Email Address" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="photo">Image</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="image" class="form-control" name="photo"  >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+        <div class="form-group">
+            <button class="btn btn-block btn-lg bg-pink waves-effect" type="Submit">Add New Member</button>
+        </div>
+   </div>
+</div>
+</div>
+</div>
+
+
+
+<div class="body">
+<div id="List" class="tabcontent" style="display: none;">
+
+ <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Member Detail</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-3"> 
+                                    </div>
+                                    <div class="col-sm-3"> 
+                                    </div>
+                                    <div class="col-sm-3"> 
+                                    </div>
+                                    <div class="col-sm-3"> 
+                                        <input type="text" id="search" class="form-control" placeholder="Search...">
+                                    </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="grid-view table-responsive" id="item-grid">
+<table class="items table">
+<thead>
+<tr>
+<th id="item-grid_c0">Member ID</th><th id="item-grid_c1">Member Name</th><th id="item-grid_c2">Batch</th><th id="item-grid_c3">Department</th><th id="item-grid_c4">Contact</th><th class="button-column" id="item-grid_c6">Manage</th></tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td width="20%">1</td><td width="20%">1</td><td width="20%">cnsdjnvdj</td><td width="22.5%">first</td><td width="22.5%">BscCSIT</td><td width="10%"><a class="glyphicon glyphicon-pencil" title="" href="/index.php/library/librarybooks/update/id/39989"><img src="" alt=""></a> <a class="glyphicon glyphicon-eye-open" title="" href="/index.php/library/librarybooks/view/id/39989"><img src="" alt=""></a> <a class="glyphicon glyphicon-remove" title="" href="/index.php/library/librarybooks/delete/id/39989"><img src="" alt=""></a></td></tr>
+
+
+</tbody>
+</table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+

@@ -1,0 +1,250 @@
+
+    <div class="card">   
+  <div class="body">
+<div class="content-wrapper">
+    <div class="content">
+   <div class="page-header">
+          <form (ngSubmit)="saveManageBook()" #ManageBookForm="ngForm">
+<ol class="breadcrumb breadcrumb-bg-blue">
+
+                                <li><a href="#"><i class="material-icons">home</i> Home</a></li>
+                               
+                                 <li><a href="#"><i class="material-icons">library_books</i>Library</a></li>
+                                <li class="active">Add Book</li>
+   
+                                <ul class="breadcrumb-elements">
+                                    
+          
+        </ul>
+         <a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a><a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a>
+
+            </ol> 
+           
+                
+                     
+
+      <div class="body">
+                      
+<button class="tablink" onclick="openPage('Add', this, 'blue')" type="button" data-color="blue" class="btn bg-blue waves-effect"><b>Add New Book</b></button>
+ 
+<button class="tablink" onclick="openPage('List', this, 'blue')" type="button" data-color="blue" class="btn bg-blue waves-effect"><b>Book Details</b></button> 
+</div>
+<div id="Add" class="tabcontent">
+
+       <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    
+                        <div class="header">                         
+                              <b><h2 style="color:Tomato;">Add Book</h2></b>
+                           
+                        </div>
+
+                        <div class="body">
+                          
+                                
+                <div class="row clearfix">
+                                <div class="col-sm-6">
+                                    
+              <label for="phone">Purchase Date</label>
+       <input type="date" class="form-control" [(ngModel)]="book.purchase_date" name="purchase_date" placeholder="Enter Date">
+                                        </div>
+                                    
+                                <div class="col-sm-6">
+                                    
+                                           <label for="phone">Bill No.</label>
+                                            <input type="text" class="form-control" [(ngModel)]="book.bill_no" name="bill_no" placeholder="Enter Bill Number">
+                                        </div>
+                                    </div>
+                               <br>
+                         
+                                       
+                <div class="row clearfix">
+                                <div class="col-sm-6">
+                                
+                                       
+                                           <label for="phone">Book ISBN No.</label>
+                                            <input type="text" class="form-control" [(ngModel)]="book.isbn_number" name="isbn_number" placeholder="Enter ISBN Number">
+                                        
+                                    
+                                </div>
+                                
+                                <div class="col-sm-6">
+                                   
+                                           <label for="phone">Book No.</label>
+                                            <input type="text" class="form-control" [(ngModel)]="book.book_no" name="book_no" placeholder="Enter Book Number">
+                                        </div>
+                                    </div>
+                               <br>
+                       
+                                         
+                <div class="row clearfix">
+                                <div class="col-sm-6">
+                                   
+                                           <label for="phone">Title</label>
+                                            <input type="text" class="form-control" [(ngModel)]="book.name" name="name" placeholder="Enter Book Title">
+                                        </div>
+                                    
+                                <div class="col-sm-6">
+                                    
+                                           <label for="phone">Author</label>
+                                            <input type="text" class="form-control" [(ngModel)]="book.author" name="author" placeholder="Enter Author Name">
+                                        </div>
+                                    </div>
+                              
+           <br>
+                 <div class="row clearfix">
+                                <div class="col-sm-6">
+                                    
+
+                                           <label for="phone">Edition</label>
+                                            <input type="text" class="form-control" [(ngModel)]="book.edition" name="edition" placeholder="Enter Book Title">
+                                        </div>
+                                    
+                                <div class="col-sm-6">
+                                   
+                                  <label for="Title">Book Category</label>
+                            
+
+     <select class="form-control" (change)="selectBookCategory($event.target.value)"      
+     [(ngModel)]="book.book_category_id" name="bookcategory">
+      <option [value]="category.id" *ngFor="let category of bookcategory">{{category.category_name}}</option>
+      </select>
+             
+          </div>
+        </div>
+      <br>
+          
+       <div class="row clearfix">
+                                <div class="col-sm-6">
+                                   
+                                           <label for="phone">Publisher</label>
+                                            <input type="text" class="form-control" [(ngModel)]="book.publisher" name="publisher" placeholder="Enter Publisher Name">
+                                        </div>
+                                   
+                                <div class="col-sm-6">
+                                   
+                                           <label for="phone">No.of Copies</label>
+                                            <input type="text" class="form-control" [(ngModel)]="book.no_of_copies" name="no_of_copies" placeholder="Enter Book Number">
+                                        </div>
+                                    </div>
+                               <br>
+
+                    <div class="row clearfix">
+                                <div class="col-sm-6">
+                                  
+                                           <label for="phone">Shelf No.</label>
+                                            <input type="text" class="form-control" placeholder="Enter ISBN Number">
+                                        </div>
+                                   
+                                <div class="col-sm-6">
+                                   
+                                           <label for="phone">Book Position</label>
+                                            <input type="text" class="form-control" placeholder="Enter Book Number">
+                                        </div>
+                                    </div>
+                               
+<br>
+                             <div class="row clearfix">
+                                <div class="col-sm-6">
+                                   
+                                           <label for="phone">Book Cost</label>
+                                            <input type="text" class="form-control" [(ngModel)]="book.book_cost" name="book_cost" placeholder="Enter ISBN Number">
+                                        </div>
+                                   
+
+                                <div class="col-sm-6">
+                                    
+
+                                           <label for="phone">Language</label>
+                                            <input type="text" class="form-control" placeholder="Enter Book Number">
+                                        </div>
+                                    </div>
+                                
+                               <br>
+                             <div class="row clearfix">
+                            <div class="col-sm-6">
+                                   
+                                  <label for="Title">Book Condition</label>
+                                <select class="form-control" [(ngModel)]="book.book_condition" name="book_condition">
+
+                                    <option>--Select Option--</option>
+                                    <option value="1">As New</option>
+                                    <option value="2">Fine</option>
+                                      <option value="3">Very Good</option>
+                                        <option value="4">Good</option>
+                                          <option value="5">Fair</option>
+                                            <option value="6">Poor</option>
+                                              <option value="7">Missing</option>
+                                                <option value="8">Lost</option>
+                                   
+                                </select>
+                            </div>
+                        </div>
+                   <br>
+          
+                       
+                       
+
+                   <div class="row">
+                        <div class="col-sm-5">
+                         <div class="form_sep">
+<input class="btn btn-info" type="submit" name="yt0" value="Save">                                        </div>
+                 </div>
+                                </div>
+   </div>
+</div>
+</div>
+</div>
+
+
+<div class="body">
+<div id="List" class="tabcontent" style="display: none;">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Book List</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-3"> 
+                                    </div>
+                                    <div class="col-sm-3"> 
+                                    </div>
+                                    <div class="col-sm-3"> 
+                                    </div>
+                                    <div class="col-sm-3"> 
+                                        <input type="text" id="search" class="form-control" placeholder="Search...">
+                                    </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="grid-view table-responsive" id="item-grid">
+<table class="items table">
+<thead>
+<tr>
+<th id="item-grid_c0">SI.No.</th><th id="item-grid_c1">Book ISBN No.</th><th id="item-grid_c2">Book No.</th><th id="item-grid_c3">Title</th><th id="item-grid_c4">Publisher</th><th class="button-column" id="item-grid_c5">Manage</th></tr>
+</thead>
+<tbody>
+                <tr *ngFor="let book of books">
+                                        <td>{{ book.id }}</td>
+                                        <td>{{ book.isbn_number}}</td>
+                                        <td>{{ book.book_no}}</td>
+                                        <td>{{ book.name}}</td>
+                                        <td>{{ book.publisher}}</td>
+                                        <td><a class="glyphicon glyphicon-pencil" href="/managebook/update/{{book.id}}"></a>
+                                            <a class="glyphicon glyphicon-remove" href="/managebook/delete/{{book.id}}"></a></td>
+                                      </tr> 
+
+
+</tbody>
+</table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

@@ -1,0 +1,160 @@
+
+   <div class="row">
+<div class="input-group">
+    <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-9 col-xs-9">
+                    <div class="card">
+                        <div class="header" style="background-color:#E91E63">
+                            
+                                 <h2><b style="color:white;">Search Book</b></h2>
+                            
+                        </div> 
+                        <div class="body">   
+
+<button class="tablink" onclick="openPage('Add', this, 'blue')" type="button" data-color="blue" class="btn bg-blue waves-effect"><b>Search by ISBN Number</b></button>
+
+<button class="tablink" onclick="openPage('List', this, 'blue')" type="button" data-color="blue" class="btn bg-blue waves-effect"><b>Search by Book Name</b></button> 
+</div>
+
+<div id="Add" class="tabcontent">
+
+                <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                   
+                        <div class="header">
+                            <b><h2 style="color:Tomato;">Search By ISBN Number</h2></b>                                 
+                        </div>
+                             
+                               <div class="body">
+                            <div class="table-responsive">
+                                <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="dt-buttons"><div id="DataTables_Table_1_filter" class="dataTables_filter"><label>Enter ISBN Number:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_1"></label></div></div></div>
+                            
+                      
+                      <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="book_sn">Book's Serial No.</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="phone"   placeholder="Enter Book Number" required >
+                                </div>
+                            </div>
+                         </div>
+                 </div>
+         <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="book_name">Book Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="book_name"   placeholder="Enter name Of the book" required >
+                                </div>
+                            </div>
+                         </div>
+                 
+                         </div>
+
+         <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="author">Author</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="author"   placeholder="Enter Author's Name" required >
+                                </div>
+                            </div>
+                         </div>
+                 
+                           </div>
+                          <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="publisher">Publisher</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="publisher"   placeholder="Enter Publisher's Name" required >
+                                </div>
+                            </div>
+                         </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>              
+
+<div id="List" class="tabcontent" style="display: none;">
+
+ <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               
+                        <div class="header">
+                             <b><h2 style="color:Tomato;">Search By Book Name</h2></b>
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="dt-buttons"><div id="DataTables_Table_1_filter" class="dataTables_filter"><label>Enter Book Name:<input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_1"></label></div><table class="table table-bordered table-striped table-hover dataTable js-exportable" id="DataTables_Table_1" role="grid" aria-describedby="DataTables_Table_1_info">
+                                    
+                                     <thead>
+                                        <tr>
+                                            <th>ISBN</th>
+                                            <th>Book Name</th>
+                                            <th>Author Name</th>
+                                            <th>Edition</th>
+                                            <th>Row</th>
+                                            <th>Column</th>
+                                            <th>Availability</th>
+                                            <th>Action</th>                                          
+                                        </tr>
+                                    </thead>
+                                     <tbody>
+                                             
+                                    <tr *ngFor="let search of searchs">
+                                        <td>{{ search.id }}</td>
+                                        <td>{{ search.user.full_name }}</td>
+                                        <td>{{ search.user.addresss }}</td>
+                                        <td>{{ search.user.father_name }}</td>
+                                        <td>{{ search.user.phoneno }}</td>
+                                        <td>{{ search.user.email }}</td>
+                                       <td><a href="/search/edit/{{search.id}}">Edit</a></td>
+                                      </tr>
+
+                                        
+                                    </tbody>
+                                    
+                                    
+                                </table><div class="dataTables_info" id="DataTables_Table_1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_1_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="DataTables_Table_1_previous"><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="DataTables_Table_1_next"><a href="#" aria-controls="DataTables_Table_1" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

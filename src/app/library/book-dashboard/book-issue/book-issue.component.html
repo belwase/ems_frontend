@@ -1,0 +1,247 @@
+<div class="card">
+ <div class="body">
+<div class="content-wrapper">
+    <div class="content">
+   <div class="page-header">
+<ol class="breadcrumb breadcrumb-bg-blue">
+
+                                <li><a href="#"><i class="material-icons">home</i> Home</a></li>
+                               
+                                 <li><a href="#"><i class="material-icons">library_books</i>Library</a></li>
+                                <li class="active">Issue Book</li>
+   
+                                <ul class="breadcrumb-elements">
+                                    
+          
+        </ul>
+         <a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a><a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a>
+
+            </ol> 
+      
+
+<div class="row">
+   <form (ngSubmit)="saveBookIssue()" #BookIssueForm="ngForm">
+
+    <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-9 col-xs-9">
+                                
+                     <div class="body">
+
+<button class="tablink" onclick="openPage('Add', this, 'blue')" type="button" data-color="blue" class="btn bg-blue waves-effect"><b>Issue Book</b></button>
+
+<button class="tablink" onclick="openPage('List', this, 'blue')" type="button" data-color="blue" class="btn bg-blue waves-effect"><b>Issued List</b></button> 
+
+<button class="tablink" onclick="openPage('Return', this, 'blue')" type="button" data-color="blue" class="btn bg-blue waves-effect"><b>Bulk Issue</b></button> 
+</div>
+
+<div id="Add" class="tabcontent">
+                       
+                    <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    
+                        <div class="header">                         
+                              <b><h2 style="color:Tomato;">Book Issue</h2></b>
+                           
+                        </div>
+                      </div>
+                    </div>
+
+                      <div class="panel-body">
+                      
+                                <div class="row clearfix">
+                                    <div class="form-line col-md-10">                                      
+                                        <input class="form-control ui-autocomplete-input" placeholder="Search by Book No/ ISBN No/ Book Title/ Author" id="librarybook" type="text" value="" name="librarybook" autocomplete="off"><input id="hidden-field" name="output" type="hidden" value="">  </div>
+
+                                    <div class="col-sm-2">
+                                        <label>&nbsp;</label>
+                                        <a href="javascript:getbookdetails()" class="btn btn-info">Search</a>
+                                    </div>
+                                </div>
+                            <br><br>
+
+                      
+<div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="book_name">Member ID</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                 <input type="text" class="form-control" [(ngModel)]="bookissue.member_id" name="member_id" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+
+                    <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="book_name">Date Issued</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                 <input type="date" class="form-control" [(ngModel)]="bookissue.date_issued" name="date_issued" equired >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+
+
+                    <div class="input-group">
+                         <div class="col-sm-2">
+                            <div class="form-group">
+                                     <label for="book_name">Status</label>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-line">
+                                 <input type="text" class="form-control" [(ngModel)]="bookissue.status" name="status" required >
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+
+                   
+
+
+      <div class="col-sm-5">
+        <div class="form_sep">
+                                
+         <input class="btn btn-info" name="std_reg_submit" id="std_reg_submit" type="submit" value="Create">                                       
+          </div>
+      </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="body">
+<div id="List" class="tabcontent" style="display: none;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Book List</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-3"> 
+                                    </div>
+                                    <div class="col-sm-3"> 
+                                    </div>
+                                    <div class="col-sm-3"> 
+                                    </div>
+                                    <div class="col-sm-3"> 
+                                        <input type="text" id="search" class="form-control" placeholder="Search...">
+                                    </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="grid-view table-responsive" id="item-grid">
+<table class="items table">
+<thead>
+<tr>
+<th id="item-grid_c0">Sl.No.</th><th id="item-grid_c1">Book ISBN No.</th><th id="item-grid_c2">Book No.</th><th id="item-grid_c3">Title</th><th id="item-grid_c4">Status</th><th class="button-column" id="item-grid_c5">Manage</th></tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td width="5%">1</td><td width="20%">jenga</td><td width="20%">9898nk67</td><td width="22.5%">Jenga</td><td width="22.5%">Available</td><td width="10%"><a class="glyphicon glyphicon-pencil" title="" href="/index.php/library/librarybooks/update/id/39989"><img src="" alt=""></a> <a class="glyphicon glyphicon-eye-open" title="" href="/index.php/library/librarybooks/view/id/39989"><img src="" alt=""></a> <a class="glyphicon glyphicon-remove" title="" href="/index.php/library/librarybooks/delete/id/39989"><img src="" alt=""></a></td></tr>
+<tr class="even">
+<td width="5%">2</td><td width="20%">jenga</td><td width="20%">9898nk66</td><td width="22.5%">Jenga</td><td width="22.5%">Available</td><td width="10%"><a class="glyphicon glyphicon-pencil" title="" href="/index.php/library/librarybooks/update/id/39988"><img src="" alt=""></a> <a class="glyphicon glyphicon-eye-open" title="" href="/index.php/library/librarybooks/view/id/39988"><img src="" alt=""></a> <a class="glyphicon glyphicon-remove" title="" href="/index.php/library/librarybooks/delete/id/39988"><img src="" alt=""></a></td></tr>
+
+</tbody>
+</table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+
+
+<div id="Return" class="tabcontent" style="display: none;">
+
+               <div class="body">                                
+                <div class="row clearfix">
+                                <div class="col-sm-6">
+                                    
+                                           <label for="phone">Course</label>
+                                             <select class="form-control" name="Bookissue[courseid1]" id="Bookissue_courseid1">
+<option value="">Select Course</option>
+<option value="15">Android</option>
+<option value="16">C Programming</option>
+<option value="45">Calculus</option>
+<option value="47">Data Mining</option>
+<option value="48">Real time</option>
+<option value="53">MMM</option>
+<option value="54">BE123</option>
+<option value="76">one day</option>
+<option value="79">Mathematics</option>
+<option value="92">JAVA</option>
+<option value="94">Cloud Computing</option>
+<option value="95">NETWORKING</option>
+<option value="96">Database</option>
+<option value="97">c plus plus</option>
+</select>
+                                           
+                                        </div>
+                                    
+                                <div class="col-sm-6">
+                                    
+                                           <label for="phone">Batch</label>
+                                             <select class="form-control" name="Bookissue[batchid1]" id="Bookissue_batchid1">
+<option value="">Select Batch</option>
+</select>
+                                        </div>
+                                    </div>
+                               <br>
+                         
+                                       
+                <div class="row clearfix">
+                                <div class="col-sm-6">
+                                
+                                       
+                                           <label for="phone">Book Issue Date</label>
+                                            <input type="date" class="form-control" placeholder="Enter ISBN Number">
+                                        
+                                    
+                                </div>
+                                
+                                <div class="col-sm-6">
+                                   
+                                           <label for="phone">Due Date</label>
+                                            <input type="date" class="form-control" placeholder="Enter Book Number">
+                                        </div>
+                                    </div>
+                                       
+                                   <br>
+                                               <button class="btn btn-info" onclick="savebulk()">Save</button>
+                                        </div>
+                                    </div>  
+                                    
+                               
+                              </div>
+                                             
+                              
+                            
+                          
+                  
+                                         
+                    
+      
+                              

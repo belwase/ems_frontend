@@ -1,0 +1,136 @@
+
+<div class="content-wrapper">
+    <div class="content">
+   <div class="page-header">
+<ol class="breadcrumb breadcrumb-bg-blue">
+
+                                <li><a href="#"><i class="material-icons">home</i> Home</a></li>
+                               
+                                 <li><a href="#"><i class="material-icons">library_books</i>Library</a></li>
+                                <li class="active">Book Return</li>
+   
+                                <ul class="breadcrumb-elements">
+                                    
+          
+        </ul>
+         <a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a><a class="breadcrumb-elements-toggle"><i class="icon-menu-open"></i></a>
+
+            </ol> 
+            <br>
+            <br> 
+<div class="content">
+    <div class="col-sm-12">
+        <form id="bookreturn-form" action="/index.php/library/bookreturn/create" method="post">        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Book Return</h4>
+                    </div>
+<br>
+
+                            <div class="panel-body">
+                                <div class="row clearfix">
+                                    <div class="col-sm-9">                                      
+                                        <input class="form-control ui-autocomplete-input" placeholder="Search by Book No/ ISBN No/ Book Title/ Author" id="librarybook" type="text" value="" name="librarybook" autocomplete="off"><input id="hidden-field" name="output" type="hidden" value="">  </div>
+
+                                    <div class="col-sm-3">
+                                        <label>&nbsp;</label>
+                                        <a href="javascript:getbookdetails()" class="btn btn-info">Search</a>
+                                    </div>
+                                </div>
+
+                         
+                     
+                                <div class="row" id="bookdetail" style="display:none">
+                                    <div class="col-sm-12">
+                                        <div class="panel panel-body">
+                                            <table align="center">
+                                                <tbody id="bookdetails" style="font-size: 14px">
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <br>
+
+                              
+                              
+                                    <label for="reg_input_name">Return / Renewal</label>
+                                    <select class="form-control" name="Bookreturn[returnorrenewal]" id="Bookreturn_returnorrenewal">
+<option value="">Select Option</option>
+<option value="1">Return</option>
+<option value="2">Renewal</option>
+</select>            
+                 
+                                <div class="form-group" id="datedifference" style="display:none">
+                                    <div class="alert alert-success">
+                                        <b>  <label id="tick"></label></b>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="duedate" style="display:none">
+                                    <label for="reg_input_name">Due Date</label>
+                                    <input class="form-control hasDatepicker" placeholder="due date" id="Bookreturn_due_date" name="Bookreturn[due_date]" type="text">                                    <div class="school_val_error" id="Bookreturn_bookreturn_date_em_" style="display:none"></div>                                </div>
+
+                                <div class="form-group" id="returndate" style="display:none">
+                                    <label for="reg_input_name" class="req">Return Date</label>
+                                    <input class="form-control hasDatepicker" placeholder="return date" id="Bookreturn_bookreturn_date" name="Bookreturn[bookreturn_date]" type="text">                                    <div class="school_val_error" id="Bookreturn_bookreturn_date_em_" style="display:none"></div>                                </div>
+                                <div class="form-group" id="fine" style="display:none">
+                                    <label for="Bookreturn_bookreturn_fineamount"> Fine Amount</label>                                    <input class="form-control" name="Bookreturn[bookreturn_fineamount]" id="Bookreturn_bookreturn_fineamount" type="text" maxlength="6">                                    <div class="school_val_error" id="Bookreturn_bookreturn_fineamount_em_" style="display:none"></div>                                </div>
+                                <div class="form-group" id="remarks" style="display:none">
+                                    <label>Remarks</label>
+                                    <textarea class="form-control" name="Bookreturn[bookreturn_remarks]" id="Bookreturn_bookreturn_remarks"></textarea>                                    <div class="school_val_error" id="Bookreturn_bookreturn_remarks_em_" style="display:none"></div>                                </div>
+                            </div>
+
+                       
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="form_sep">
+                                    <input class="btn btn-info" type="submit" name="yt0" value="Create">                                </div>
+                            </div>
+                        </div>
+                   
+                </div>
+            </div>
+        
+
+
+            <div class="content-wrapper">           
+    <div class="content">
+        <div class="form-group">
+    <div class="row">
+    <div class="col-sm-6">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">                  
+            <div class="grid-view" id="item-grid">
+<table class="items table">
+<thead>
+<tr>
+<th id="item-grid_c0">Sl.No.</th><th id="item-grid_c1">User</th><th id="item-grid_c2">Course</th><th id="item-grid_c3">Batch</th><th id="item-grid_c4">Book No</th><th class="button-column" id="item-grid_c5">Manage</th></tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td width="10%">1</td><td width="20%">DEM2-Anna f Maria Bobby</td><td width="20%">Android</td><td width="20%">A</td><td width="20%">12121</td><td width="10%"> <a class="glyphicon glyphicon-eye-open" title="" href="/index.php/library/bookreturn/view/id/2"><img src="" alt=""></a></td></tr>
+<tr class="even">
+<td width="10%">2</td><td width="20%">DEM1-Bhootnika ggv v KUMAR TIWARI</td><td width="20%">Class 2</td><td width="20%">D</td><td width="20%">12121</td><td width="10%"> <a class="glyphicon glyphicon-eye-open" title="" href="/index.php/library/bookreturn/view/id/4"><img src="" alt=""></a></td></tr>
+
+</tbody>
+</table>
+<div class="pager"><ul id="yw0" class="yiiPager"><li class="first hidden"><a href="/index.php/library/bookreturn/create">&lt;&lt;</a></li>
+<li class="previous hidden"><a href="/index.php/library/bookreturn/create">&lt;</a></li>
+<li class="page selected"><a href="/index.php/library/bookreturn/create">1</a></li>
+<li class="page"><a href="/index.php/library/bookreturn/create/Bookreturn_page/2">2</a></li>
+<li class="page"><a href="/index.php/library/bookreturn/create/Bookreturn_page/3">3</a></li>
+<li class="next"><a href="/index.php/library/bookreturn/create/Bookreturn_page/2">&gt;</a></li>
+<li class="last"><a href="/index.php/library/bookreturn/create/Bookreturn_page/3">&gt;&gt;</a></li></ul></div><div class="keys" style="display:none" title="/index.php/library/bookreturn/create"><span>2</span><span>4</span><span>5</span><span>6</span><span>7</span><span>9</span><span>10</span><span>12</span><span>13</span><span>14</span></div>
+</div>  
+            </div>
+     
+   
+           </div>
+</div>
+</div>
+</div>
+</div>
+</div>
